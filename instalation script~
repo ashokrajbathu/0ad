@@ -1,0 +1,22 @@
+1) First step is to get node js and npm to our server.
+visit npmjs documentation there they guide you to installing nodejs. when we install nodejs, npm comes with it.
+
+basically it redirects to
+https://github.com/nodesource/distributions#debinstall
+above link.
+i used this command from above link
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+after installing both. go to yeoman generator and find meanjs generator.
+before installing mean they ask us install some packages in their documentation. please follow it.
+
+http://meanjs.org/docs/0.4.x/
+
+
+
+
+want to meet personally if possible
+
+
+
