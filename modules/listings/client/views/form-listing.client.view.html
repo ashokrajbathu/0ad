@@ -1,0 +1,209 @@
+<section class="container">
+
+  <section class="row"> 
+   <form name="vm.form.listingForm" class="form-horizontal" ng-submit="vm.save(vm.form.listingForm.$valid)" novalidate>
+    <div class="col-sm-12 col-md-8 col-md-offset-2 features-slider">
+      
+        <h1>{{vm.listing._id ? 'Edit Listing' : 'New Listing'}}</h1>
+         
+            <div class="col-md-12 ">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Name*</span>
+                  <input name="name" type="text" ng-model="vm.listing.name" id="name" class="form-control" placeholder="Name of the space" required>
+                </div>
+                <div ng-messages="vm.form.listingForm.name.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Listing name is required.</p>
+                </div>
+              </div>          
+            </div>
+            <div class="col-md-12">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Type*</span>
+                  <input name="spacetype" type="text" ng-model="vm.listing.spacetype" id="spacetype" class="form-control" placeholder="Indoor, outdoor,flyer, Wall paint, body paint " required>
+                </div>
+                <div ng-messages="vm.form.listingForm.spacetype.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">space type is required.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Details</span>
+                  <input name="detailsofspace" type="text" ng-model="vm.listing.detailsofspace" id="detailsofspace" class="form-control" placeholder="Tell us about your space">
+                </div>
+                <!--<div ng-messages="vm.form.listingForm.detailsofspace.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">details of space is required.</p>
+                </div>-->
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Location*</span>
+                  <input name="location" type="text" ng-model="vm.listing.location" id="location" class="form-control" placeholder="location of space" required>
+                </div>
+                <div ng-messages="vm.form.listingForm.location.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">location is required.</p>
+                </div>
+              </div>
+            </div>
+             <div class="col-md-12">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Customers type*</span>
+                <input name="customerdetails" type="text" ng-model="vm.listing.customertype" id="name"   class="form-control" placeholder="employee,student,etc..." required>
+                </div>
+                <div ng-messages="vm.form.listingForm.customerdetails.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">customer type is required.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group" show-errors>
+               <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Customer details</span>
+                  <input name="targetedcustomers" type="text" ng-model="vm.listing.targetedcustomers" id="targeted customers" class="form-control" placeholder="Any specific details">
+                </div>
+                <!--<div ng-messages="vm.form.listingForm.targetedcustomers.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Customers details is required.</p>
+                </div>-->
+              </div>
+            </div>
+             <div class="col-md-12">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Age Group</span>
+                    <input name="agegroup" type="text" ng-model="vm.listing.agegroup" id="agegroup" class="form-control" placeholder="Avarage age group of your customers">
+                </div>
+                <!--<div ng-messages="vm.form.listingForm.agegroup.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Age group is required.</p>
+                </div>-->
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Gender</span>
+                  <input name="targetedgender" type="text" ng-model="vm.listing.targetedgender" id="targetedgender" class="form-control" placeholder="Is your customers a specific gender: Male, Female or others">
+                </div>
+               <!-- <div ng-messages="vm.form.listingForm.targetedgender.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">gender is required.</p>
+                </div>-->
+              </div>
+            </div>
+            <!--<div class="col-md-8">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Niche</span>
+                  <input name="targetniche" type="text" ng-model="vm.listing.targetniche" id="targetniche" class="form-control" placeholder="target niche" required>
+                </div>
+                <div ng-messages="vm.form.listingForm.targetniche.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">targetniche is required.</p>
+                </div>
+              </div> 
+            </div>-->
+            <div class="col-md-12">
+              <div class="form-group" show-errors> 
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Market</span>
+                  <input name="targetedmarket" type="text" ng-model="vm.listing.targetedmarket" id="targetedmarket" class="form-control" placeholder="What kind of advertisers will benifit if they advertise here: Food, Fashion, electonic, etc...">
+                </div>
+                <!--<div ng-messages="vm.form.listingForm.targeted market.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">targeted market is required.</p>
+                </div>-->
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Reach</span>
+                  <input name="reach" type="text" ng-model="vm.listing.reach" id="reach" class="form-control" placeholder="Daily estimated audience at your space">
+                </div>
+                <!--<div ng-messages="vm.form.listingForm.reach.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">reach is required.</p>
+                </div>-->
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Price</span>
+                  <input name="pricing" type="text" ng-model="vm.listing.pricing" id="pricing" class="form-control" placeholder="Per month" >
+                </div>
+                <!--<div ng-messages="vm.form.listingForm.pricing.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">pricing is required.</p>
+                </div>-->
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Availability*</span>
+                  <input name="spaceavailability" type="text" ng-model="vm.listing.spaceavailability" id="spaceavailability" class="form-control" placeholder="Anytime, specific days" required>
+                </div>
+                <div ng-messages="vm.form.listingForm.spaceavailability.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">space availability is required.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Contact*</span>
+                  <input name="contact" type="number" ng-model="vm.listing.contact" id="spaceavailability" class="form-control" placeholder="Your contact number" required>
+                </div>
+                <div ng-messages="vm.form.listingForm.contact.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Contact Number is required</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Email ID*</span>
+                  <input name="emailid" type="email" ng-model="vm.listing.emailid" id="spaceavailability" class="form-control" placeholder="Your contact mail ID" required>
+                </div>
+                <div ng-messages="vm.form.listingForm.emailid.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">Contact mailID is required</p>
+                </div>
+              </div>
+            </div>
+            <!--<div class="col-md-8">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Movable?</span>
+                  <input name="movablespace" type="text" ng-model="vm.listing.movablespace" id="movablespace" class="form-control" placeholder="is it movable space" required>
+                </div>
+                <div ng-messages="vm.form.listingForm.movablespace.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">is it movable space is required.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="form-group" show-errors>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Distance</span>
+                  <input name="distanceitcovers" type="text" ng-model="vm.listing.distanceitcovers" id="distanceitcovers" class="form-control" placeholder="distance it covers" required>
+                </div>
+                <div ng-messages="vm.form.listingForm.distanceitcovers.$error" role="alert">
+                  <p class="help-block error-text" ng-message="required">distance it covers is required.</p>
+                </div>
+              </div>
+            </div>-->
+            <div class="col-md-8">
+            <div class="form-group">
+
+                <button type="submit" class="btn btn-default">{{vm.listing._id ? 'Update' : 'Create'}}</button>
+            </div>
+            <div ng-show="vm.error" class="text-danger">
+              <strong ng-bind="vm.error"></strong>
+            </div>
+            </div>
+      </div>
+    </form>
+  </section>
+</section>  

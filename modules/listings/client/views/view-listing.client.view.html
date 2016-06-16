@@ -1,0 +1,182 @@
+<section class="bg">
+  <section class="container">
+    <div class="row box-boxer">
+      
+        <div class="col-md-6 col-md-offset-0 ">
+          <img ng-src="{{vm.listing.listingImageURL}}" alt="sorry" class="img-thumbnail  listing-profile-picture"><br/>
+        </div>
+      
+    
+      <div class="col-md-6 col-md-offset-0">
+        <h1 data-ng-bind="vm.listing.name"></h1>
+      </div>
+  
+      <div class="col-md-6 col-md-offset-0">
+        <div class="row">
+          <div class="col-md-12">
+           <span class="span-font">Type:
+              <strong>
+                {{vm.listing.spacetype}}
+              </strong>
+            </span>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-6 col-md-offset-0">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="span-font">
+            Details of space:
+              <strong>{{vm.listing.detailsofspace}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+   
+      <div class="col-md-6 col-md-offset0">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="span-font">
+              Location:
+              <strong>{{vm.listing.location}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-md-offset0">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="span-font">
+              Target Customers:
+              <strong>{{vm.listing.targetedcustomers}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-md-offset0">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="span-font">
+              About Customers:
+              <strong>{{vm.listing.customerdetails}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-md-offset0">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="span-font">
+              Age Group:
+              <strong>{{vm.listing.agegroup}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-md-offset0">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="span-font">
+              Target Gender:
+              <strong>{{vm.listing.targetedgender}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-md-offset0">
+        <div class="row">
+            <div class="col-md-12">
+            <span class="span-font">
+              Target Niche:
+              <strong>{{vm.listing.targetniche}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-md-offset0">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="span-font">
+              Target Market:
+              <strong>{{vm.listing.targetedmarket}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-md-offset0">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="span-font">
+              Maximum people Ad Reaches :
+              <strong>{{vm.listing.reach}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-md-offset0">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="span-font">
+              Price:
+              <strong>{{vm.listing.pricing}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-md-offset0">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="span-font">
+              Availability to Book:
+              <strong>{{vm.listing.spaceavailability}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+    </div> 
+
+  
+      <!-- Movable - <p class="list-group-item-heading" data-ng-bind="vm.listing.movablespace"></p>
+      distance it covers <p class="list-group-item-heading" data-ng-bind="vm.listing.distanceitcovers"></p>-->
+        
+  </div>
+  <div class="pull-right"
+       data-ng-show="vm.listing.isCurrentUserOwner">
+    <a class="btn btn-primary"
+       data-ui-sref="listings.edit({ listingId: vm.listing._id })">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" data-ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+    <div ng-show="vm.listing.isCurrentUserOwner">
+      <a class="btn btn-primary"
+       data-ui-sref="listings.addphotos({ listingId: vm.listing._id })">
+      <i class="glyphicon glyphicon-edit">Add images</i>
+    </a>
+    </div>
+    
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span data-ng-bind="vm.listing.created | date:'mediumDate'"></span>
+      by
+      <span data-ng-if="vm.listing.user"
+            data-ng-bind="vm.listing.user.displayName"></span>
+      <span data-ng-if="!vm.listing.user">Deleted User</span>
+    </em>
+  </small>
+  <p class="lead" data-ng-bind="vm.listing.content"></p>
+  <div ng-hide="vm.listing.isCurrentUserOwner">
+      <a class="btn btn-primary"
+       data-ui-sref="listings.bookit({ listingId: vm.listing._id })">
+      <i class="glyphicon glyphicon-edit">Book it</i>
+    </a>
+    </div>
+</section>
+</section>
+
