@@ -27,6 +27,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       url: '/unique',
       templateUrl: 'modules/core/client/views/unique.client.view.html'
     })
+    .state('google5928c15a3bf0a5be.html', {
+      url: '/unique',
+      templateUrl: 'modules/core/client/views/google5928c15a3bf0a5be.html'
+    })
     .state('careers', {
       url: '/careers',
       templateUrl: 'modules/core/client/views/careers.client.view.html'
